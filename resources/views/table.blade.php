@@ -1,0 +1,42 @@
+@extends('template.master4')
+@section('tab')
+<table class="table">
+				<thead>
+					<tr>
+						<th>
+							#
+						</th>
+						<th>
+							Kode_Barang
+						</th>
+						<th>
+							Nama_Barang
+						</th>
+						<th>
+							Harga
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					@php
+						$no=1;
+					@endphp
+					@foreach($a as $tab)
+					<tr>
+						<td>
+							{{$no++}}
+						</td>
+						<td>
+							{{$tab->Kode_barang}}
+						</td>
+						<td>
+							{{$tab->Nama_barang}}
+						</td>
+						<td>
+							{{$tab->Harga}}
+						</td>
+					</tr>
+					@endforeach
+				</tbody>
+			</table>
+@endsection
